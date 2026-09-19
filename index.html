@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -260,15 +261,7 @@ p{ max-width:var(--measure); }
 #booking-slot{
   margin-top:2.5rem;
   min-height:520px;
-  border:1px dashed rgba(201,162,39,.45);
-  border-radius:4px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:3rem 1.5rem;
 }
-#booking-slot p{ color:var(--sage); margin:0 auto; max-width:34ch; }
 
 /* ---------------------------------------------------------------
    FOOTER
@@ -330,13 +323,18 @@ footer .mark{ margin:0; }
      ============================================================ -->
 <section class="rail" id="how">
   <div class="wrap">
-    <span class="hook" aria-hidden="true"></span>
+    <span class="hook" aria-hidden="true">
+      <svg viewBox="0 0 34 28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 2.5c0-2 3-2 3 0 0 1.6-1.6 2-3 2.9L4 13.5c-2 1.3-2 4 0 5.2 3.5 2.1 8.2 3.3 13 3.3s9.5-1.2 13-3.3c2-1.2 2-3.9 0-5.2L17 5.4"/>
+        <path d="M3 19.5h28"/>
+      </svg>
+    </span>
     <h2>How it works</h2>
     <p class="lede">Three steps, and the first one is free.</p>
 
     <ol class="steps">
       <li>
-        <h3>Twenty minutes on the phone</h3>
+        <h3>Fifteen minutes on the phone</h3>
         <p>You send a few photos ahead of time, we talk about what's frustrating
           you, and you find out whether this is worth your money before you spend any.</p>
       </li>
@@ -361,13 +359,18 @@ footer .mark{ margin:0; }
      ============================================================ -->
 <section class="rail" id="services">
   <div class="wrap">
-    <span class="hook" aria-hidden="true"></span>
+    <span class="hook" aria-hidden="true">
+      <svg viewBox="0 0 34 28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 2.5c0-2 3-2 3 0 0 1.6-1.6 2-3 2.9L4 13.5c-2 1.3-2 4 0 5.2 3.5 2.1 8.2 3.3 13 3.3s9.5-1.2 13-3.3c2-1.2 2-3.9 0-5.2L17 5.4"/>
+        <path d="M3 19.5h28"/>
+      </svg>
+    </span>
     <h2>What you can book</h2>
 
     <div class="services">
       <div class="service">
         <h3>Intro call</h3>
-        <p>Twenty minutes. You tell me what isn't working, I tell you honestly
+        <p>Fifteen minutes. You tell me what isn't working, I tell you honestly
           whether I can help and what it would cost.</p>
         <span class="price">Free</span>
       </div>
@@ -402,7 +405,12 @@ footer .mark{ margin:0; }
      ============================================================ -->
 <section class="intake rail" id="before">
   <div class="wrap">
-    <span class="hook" aria-hidden="true"></span>
+    <span class="hook" aria-hidden="true">
+      <svg viewBox="0 0 34 28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 2.5c0-2 3-2 3 0 0 1.6-1.6 2-3 2.9L4 13.5c-2 1.3-2 4 0 5.2 3.5 2.1 8.2 3.3 13 3.3s9.5-1.2 13-3.3c2-1.2 2-3.9 0-5.2L17 5.4"/>
+        <path d="M3 19.5h28"/>
+      </svg>
+    </span>
     <h2>Send these before we talk</h2>
     <p class="lede">Four things, five minutes. They make the free call actually
       useful instead of introductory.</p>
@@ -429,29 +437,34 @@ footer .mark{ margin:0; }
      ============================================================ -->
 <section class="rail" id="book">
   <div class="wrap">
-    <span class="hook" aria-hidden="true"></span>
+    <span class="hook" aria-hidden="true">
+      <svg viewBox="0 0 34 28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 2.5c0-2 3-2 3 0 0 1.6-1.6 2-3 2.9L4 13.5c-2 1.3-2 4 0 5.2 3.5 2.1 8.2 3.3 13 3.3s9.5-1.2 13-3.3c2-1.2 2-3.9 0-5.2L17 5.4"/>
+        <path d="M3 19.5h28"/>
+      </svg>
+    </span>
     <h2>Book the intro call</h2>
     <p class="lede">Pick any open slot. You'll get a confirmation email with the
       four things to send over.</p>
 
     <div id="booking-slot">
-      <p>
-<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-introcall"></div>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "introcall", {origin:"https://app.cal.com"});
-Cal.config = Cal.config || {};
-Cal.config.forwardQueryParams = true;
+      <!-- Cal inline embed code begins -->
+      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-introcall"></div>
+      <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "introcall", {origin:"https://app.cal.com"});
+        Cal.config = Cal.config || {};
+        Cal.config.forwardQueryParams = true;
 
-  Cal.ns.introcall("inline", {
-    elementOrSelector:"#my-cal-inline-introcall",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "closetstyle/introcall",
-  });
+        Cal.ns.introcall("inline", {
+          elementOrSelector:"#my-cal-inline-introcall",
+          config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+          calLink: "closetstyle/introcall",
+        });
 
-  Cal.ns.introcall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-  <!-- Cal inline embed code ends -->.</p>
+        Cal.ns.introcall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      </script>
+      <!-- Cal inline embed code ends -->
     </div>
   </div>
 </section>
@@ -464,7 +477,7 @@ Cal.config.forwardQueryParams = true;
 <footer>
   <p class="mark">Play In Your Closet</p>
   <p style="margin:0">
-    <a href="mailto:makeda.queen@live.com">Closet Style</a>
+    <a href="mailto:hello@example.com">hello@example.com</a>
     &nbsp;·&nbsp;
     <a href="https://instagram.com/" rel="noopener">Instagram</a>
   </p>
@@ -473,23 +486,27 @@ Cal.config.forwardQueryParams = true;
 
 
 <!-- ===============================================================
-   <!-- Cal inline embed code begins -->
-<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-introcall"></div>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "introcall", {origin:"https://app.cal.com"});
-Cal.config = Cal.config || {};
-Cal.config.forwardQueryParams = true;
+     PASTE-IN SNIPPETS — pick one, drop it inside #booking-slot
+     (and delete the placeholder paragraph that's in there now).
 
-  Cal.ns.introcall("inline", {
-    elementOrSelector:"#my-cal-inline-introcall",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "closetstyle/introcall",
-  });
+     CAL.COM (free, unlimited service types):
+       <iframe src="https://cal.com/YOUR-USERNAME/intro-call"
+               style="width:100%;height:100%;min-height:520px;border:0"
+               title="Booking calendar"></iframe>
 
-  Cal.ns.introcall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-  <!-- Cal inline embed code ends -->
+     SQUARE APPOINTMENTS (free, takes card payments):
+       Square gives you a hosted booking page. Easiest is to swap the
+       #booking-slot div for a button:
+       <a class="btn" href="https://square.site/book/YOUR-ID">Book a call</a>
+
+     CALENDLY (free, one event type only):
+       <div class="calendly-inline-widget"
+            data-url="https://calendly.com/YOUR-NAME/15min"
+            style="min-width:320px;height:520px"></div>
+       <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+     If you use an iframe, also delete the dashed border rule for
+     #booking-slot in the CSS above so it doesn't double up.
      =============================================================== -->
 
 </body>
