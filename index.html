@@ -71,12 +71,16 @@ section{ padding:clamp(3.5rem,8vw,6.5rem) var(--gutter); }
 }
 .hook{
   display:block;
-  width:11px; height:22px;
-  margin:-11px 0 2.25rem;
-  border:1.5px solid var(--brass);
-  border-top:none;
-  border-radius:0 0 7px 7px;
-  border-left-color:transparent;
+  width:34px; height:28px;
+  margin:-13px 0 2.25rem;
+}
+.hook svg{ width:100%; height:100%; display:block; }
+.hook path{
+  fill:none;
+  stroke:var(--brass);
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 
 .wrap{ max-width:76rem; margin:0 auto; }
