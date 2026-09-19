@@ -332,7 +332,7 @@ footer .mark{ margin:0; }
 
     <ol class="steps">
       <li>
-        <h3>Fifteen minutes on the phone</h3>
+        <h3>Twenty minutes on the phone</h3>
         <p>You send a few photos ahead of time, we talk about what's frustrating
           you, and you find out whether this is worth your money before you spend any.</p>
       </li>
@@ -363,7 +363,7 @@ footer .mark{ margin:0; }
     <div class="services">
       <div class="service">
         <h3>Intro call</h3>
-        <p>Fifteen minutes. You tell me what isn't working, I tell you honestly
+        <p>Twenty minutes. You tell me what isn't working, I tell you honestly
           whether I can help and what it would cost.</p>
         <span class="price">Free</span>
       </div>
@@ -431,8 +431,23 @@ footer .mark{ margin:0; }
       four things to send over.</p>
 
     <div id="booking-slot">
-      <p>Your booking calendar goes here — paste the embed code from Cal.com,
-        Square, or Calendly into this box.</p>
+      <p>
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-introcall"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "introcall", {origin:"https://app.cal.com"});
+Cal.config = Cal.config || {};
+Cal.config.forwardQueryParams = true;
+
+  Cal.ns.introcall("inline", {
+    elementOrSelector:"#my-cal-inline-introcall",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "closetstyle/introcall",
+  });
+
+  Cal.ns.introcall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal inline embed code ends -->.</p>
     </div>
   </div>
 </section>
